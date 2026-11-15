@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this paper or replication package, please cite it as below."
+title: "Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy"
+authors:
+  - family-names: Papadogiannis
+    given-names: Agisilaos
+    orcid: "https://orcid.org/0009-0002-7753-7052"
+date-released: 2026-11-15
+version: "1.0"
+license: MIT
+repository-code: "https://github.com/apapadogiannis/bitcoin-is-not-money"
+preferred-citation:
+  type: article
+  title: "Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy"
+  authors:
+    - family-names: Papadogiannis
+      given-names: Agisilaos
+  journal: "Asian Economics Letters"
+  status: in-press

@@ -1,0 +1,28 @@
+{
+  "title": "Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy: replication package",
+  "upload_type": "software",
+  "description": "Replication package for the paper forthcoming in Asian Economics Letters. From the quantity identity, a hard-capped monetary base with stable velocity turns output growth at rate g into deflation at rate g; the paper applies this to fast-growing Asian economies where crypto adoption is highest. Includes the data behind Figure 1 (IMF growth projections, Chainalysis adoption ranks), the scripts that produce all three figures and the numbers derived in the text.",
+  "creators": [
+    {
+      "name": "Papadogiannis, Agisilaos",
+      "orcid": "0009-0002-7753-7052"
+    }
+  ],
+  "keywords": [
+    "Bitcoin",
+    "monetary elasticity",
+    "deflation",
+    "quantity identity",
+    "fixed supply",
+    "Asia",
+    "replication package"
+  ],
+  "license": "MIT",
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/apapadogiannis/bitcoin-is-not-money",
+      "scheme": "url"
+    }
+  ]
+}

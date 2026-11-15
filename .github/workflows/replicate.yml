@@ -1,0 +1,43 @@
+name: replication
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 1 * *"   # first of each month: catches upstream breakage
+
+jobs:
+  replicate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-lock.txt
+
+      - name: Regenerate every table and figure
+        run: ./run_all.sh
+
+      - name: Verify tables match the committed results
+        # Figures can differ by renderer; every CSV table must be identical.
+        run: |
+          git diff --exit-code --stat -- 'outputs/*.csv'
+          echo "All result tables reproduce byte-for-byte."
+
+      - name: Upload regenerated outputs
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: regenerated-outputs
+          path: |
+            outputs/
+            figures/
+          retention-days: 30
