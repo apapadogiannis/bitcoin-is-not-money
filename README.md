@@ -1,9 +1,10 @@
 # Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy
 
+[![SSRN](https://img.shields.io/badge/SSRN-10.2139%2Fssrn.5435197-1f4e79)](https://doi.org/10.2139/ssrn.5435197)
 [![replication](https://github.com/apapadogiannis/bitcoin-is-not-money/actions/workflows/replicate.yml/badge.svg)](https://github.com/apapadogiannis/bitcoin-is-not-money/actions/workflows/replicate.yml)
 
 Replication package for the paper by Agisilaos Papadogiannis, forthcoming in *Asian Economics Letters*.
-Paper: `paper/manuscript.pdf` (author version, with LaTeX source).
+Paper: `paper/manuscript.pdf` (author version, with LaTeX and Word sources); preprint on SSRN: [doi:10.2139/ssrn.5435197](https://doi.org/10.2139/ssrn.5435197).
 
 ## What this is
 
@@ -26,7 +27,7 @@ and the numbers derived in the text.
 scripts/    one script per figure or calculation (see below)
 outputs/    the tables behind the figures and the numbers quoted in the text (CSV)
 figures/    the three figures (PNG and PDF)
-paper/      the manuscript PDF and LaTeX source
+paper/      the manuscript PDF, LaTeX source and Word file
 data/       all input data (see Data and licensing)
 ```
 
@@ -68,6 +69,7 @@ Each takes `python3 -I <script>.py DATA_DIR OUT_DIR`.
 ## Citation
 
 > Papadogiannis, A. (forthcoming). "Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy." *Asian Economics Letters*.
+> SSRN: https://doi.org/10.2139/ssrn.5435197
 
 ## Disclaimer
 
