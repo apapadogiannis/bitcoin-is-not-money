@@ -63,6 +63,7 @@ Each takes `python3 -I <script>.py DATA_DIR OUT_DIR`.
 - Both files hold a handful of published figures, transcribed by hand with the source
   cited; data accessed November 2026.
 - Code: MIT License. Output tables and figures (`outputs/`, `figures/`): CC BY 4.0, cite the paper.
+- Paper (`paper/`): CC BY-SA 4.0, the license of *Asian Economics Letters*.
 
 ## Citation
 
