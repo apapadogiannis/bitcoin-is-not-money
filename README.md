@@ -1,10 +1,12 @@
 # Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy
 
+[![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.24249917-007ec6)](https://doi.org/10.5281/zenodo.24249917)
 [![SSRN](https://img.shields.io/badge/SSRN-10.2139%2Fssrn.5435197-1f4e79)](https://doi.org/10.2139/ssrn.5435197)
 [![replication](https://github.com/apapadogiannis/bitcoin-is-not-money/actions/workflows/replicate.yml/badge.svg)](https://github.com/apapadogiannis/bitcoin-is-not-money/actions/workflows/replicate.yml)
 
 Replication package for the paper by Agisilaos Papadogiannis, forthcoming in *Asian Economics Letters*.
 Paper: `paper/manuscript.pdf` (author version, with LaTeX and Word sources); preprint on SSRN: [doi:10.2139/ssrn.5435197](https://doi.org/10.2139/ssrn.5435197).
+Archived on Zenodo: [doi:10.5281/zenodo.24249917](https://doi.org/10.5281/zenodo.24249917).
 
 ## What this is
 
@@ -70,6 +72,11 @@ Each takes `python3 -I <script>.py DATA_DIR OUT_DIR`.
 
 > Papadogiannis, A. (forthcoming). "Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy." *Asian Economics Letters*.
 > SSRN: https://doi.org/10.2139/ssrn.5435197
+
+Code and data:
+
+> Papadogiannis, A. (2026). "Bitcoin Is Not Money: replication package." Zenodo.
+> https://doi.org/10.5281/zenodo.24249917
 
 ## Disclaimer
 

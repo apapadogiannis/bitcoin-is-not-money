@@ -7,6 +7,7 @@ authors:
     orcid: "https://orcid.org/0009-0002-7753-7052"
 date-released: 2026-11-15
 version: "1.0"
+doi: "10.5281/zenodo.24249917"
 license: MIT
 repository-code: "https://github.com/apapadogiannis/bitcoin-is-not-money"
 preferred-citation:
