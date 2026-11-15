@@ -3,6 +3,7 @@
 [![replication](https://github.com/apapadogiannis/bitcoin-is-not-money/actions/workflows/replicate.yml/badge.svg)](https://github.com/apapadogiannis/bitcoin-is-not-money/actions/workflows/replicate.yml)
 
 Replication package for the paper by Agisilaos Papadogiannis, forthcoming in *Asian Economics Letters*.
+Paper: `paper/manuscript.pdf` (author version, with LaTeX source).
 
 ## What this is
 
@@ -25,6 +26,7 @@ and the numbers derived in the text.
 scripts/    one script per figure or calculation (see below)
 outputs/    the tables behind the figures and the numbers quoted in the text (CSV)
 figures/    the three figures (PNG and PDF)
+paper/      the manuscript PDF and LaTeX source
 data/       all input data (see Data and licensing)
 ```
 
