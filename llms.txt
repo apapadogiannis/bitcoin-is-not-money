@@ -29,7 +29,8 @@ Each is read from one cell of a stored result table, named in outputs/results.js
 - Time for the price level to halve with a fixed money stock and growth of 5% a year: 13.9 years.
   the text of the paper.
 - The same with growth of 7% a year: 9.9 years. the text of the paper.
-- Deflation implied for India by its projected growth in 2026: -6.2 per cent a year. Figure 1.
+- Change in the price level implied for India by its projected growth in 2026 (negative is
+  deflation): -6.2 per cent a year. Figure 1.
 
 ## What this adds over reading the paper or recomputing
 
@@ -68,12 +69,17 @@ Raw files: https://raw.githubusercontent.com/apapadogiannis/bitcoin-is-not-money
 
 ## How to read the figures
 
+- Rates are continuously compounded: the halving time is ln 2 divided by the rate. With yearly
+  compounding the figures differ slightly.
+- The columns named implied deflation hold the change in the price level, so they are negative:
+  -6.2 means prices falling by 6.2% a year.
 - Units: growth and deflation in per cent a year, halving times in years.
 - The implied deflation is a mechanical consequence of an identity under two assumptions: a fixed
   money stock and stable velocity. It is not a forecast of prices in any of these economies, none
   of which uses a fixed money.
 - Growth for 2025 and 2026 are projections made in October 2025. India is on a fiscal-year basis.
-- The price path of Figure 2 is an illustration with round parameters, not data.
+- The price path of Figure 2 is an illustration with round parameters, not data; the README gives
+  them.
 - The adoption rank is shown beside the growth figures for context. The paper does not estimate a
   relation between the two.
 
