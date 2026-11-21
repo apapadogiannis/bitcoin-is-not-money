@@ -1,0 +1,111 @@
+{
+  "package": {
+    "title": "Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy",
+    "author": {
+      "name": "Agisilaos Papadogiannis",
+      "orcid": "https://orcid.org/0009-0002-7753-7052",
+      "url": "https://github.com/apapadogiannis"
+    },
+    "status": "forthcoming article",
+    "article": {
+      "journal": "Asian Economics Letters",
+      "status": "forthcoming"
+    },
+    "preprint": "https://doi.org/10.2139/ssrn.5435197",
+    "repository": "https://github.com/apapadogiannis/bitcoin-is-not-money",
+    "archive": "https://doi.org/10.5281/zenodo.24249917",
+    "version": "1.1.0",
+    "released": "2026-11-21",
+    "data_as_of": "Growth figures from the IMF Regional Economic Outlook for Asia and Pacific, October 2025; adoption ranks from the Chainalysis 2025 index. Accessed November 2026.",
+    "units": "Growth and deflation rates are in per cent a year; halving times in years; ranks are positions among 151 countries. The price path of Figure 2 is in index units.",
+    "licence": {
+      "results": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "condition": "Reuse of the results is allowed with credit to the paper.",
+      "code": "MIT",
+      "third_party_data": "The growth figures are from the International Monetary Fund and the adoption ranks from Chainalysis: a handful of published figures, transcribed by hand with the source cited. They remain the property of their sources and are not covered by the licence above. The paper itself is under CC BY-SA 4.0, the licence of Asian Economics Letters."
+    },
+    "cite_as": "Papadogiannis, A. (forthcoming). Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy. Asian Economics Letters, forthcoming. https://doi.org/10.2139/ssrn.5435197",
+    "cite_package": "Papadogiannis, A. (2026). Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy. Replication package, version 1.1.0. Zenodo. https://doi.org/10.5281/zenodo.24249917",
+    "describe_as": "Papadogiannis (forthcoming), \"Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy\", Asian Economics Letters, with its replication package.",
+    "guide": "llms.txt"
+  },
+  "headline": [
+    {
+      "what": "Time for the price level to halve with a fixed money stock and growth of 5% a year",
+      "value": 13.9,
+      "unit": "years",
+      "where": "the text of the paper",
+      "source": {
+        "file": "outputs/text_numbers.csv",
+        "row": {
+          "growth_rate_percent": "5.0"
+        },
+        "column": "price_level_halving_time_years"
+      }
+    },
+    {
+      "what": "The same with growth of 7% a year",
+      "value": 9.9,
+      "unit": "years",
+      "where": "the text of the paper",
+      "source": {
+        "file": "outputs/text_numbers.csv",
+        "row": {
+          "growth_rate_percent": "7.0"
+        },
+        "column": "price_level_halving_time_years"
+      }
+    },
+    {
+      "what": "Deflation implied for India by its projected growth in 2026",
+      "value": -6.2,
+      "unit": "per cent a year",
+      "where": "Figure 1",
+      "source": {
+        "file": "outputs/fig1_data.csv",
+        "row": {
+          "economy": "India"
+        },
+        "column": "implied_deflation_2026"
+      }
+    }
+  ],
+  "tables": [
+    {
+      "file": "outputs/fig1_data.csv",
+      "what": "Figure 1: growth, implied deflation and adoption rank of five Asian economies.",
+      "rows": 5,
+      "columns": {
+        "economy": "the economy",
+        "growth_2024": "real GDP growth in 2024, per cent",
+        "growth_2025": "projected real GDP growth in 2025, per cent",
+        "growth_2026": "projected real GDP growth in 2026, per cent",
+        "implied_deflation_2025": "change in the price level implied by that growth with money and velocity fixed, per cent",
+        "implied_deflation_2026": "the same for 2026",
+        "chainalysis_rank_2025": "rank among 151 countries in the Chainalysis 2025 Global Crypto Adoption Index"
+      }
+    },
+    {
+      "file": "outputs/text_numbers.csv",
+      "what": "The numbers derived in the text: implied deflation and halving time of the price level, by growth rate.",
+      "rows": 7,
+      "columns": {
+        "growth_rate_percent": "output growth, per cent a year",
+        "implied_deflation_percent": "implied change in the price level, per cent a year",
+        "price_level_halving_time_years": "years in which the price level halves at that rate"
+      }
+    },
+    {
+      "file": "outputs/fig2_price_path.csv",
+      "what": "Figure 2: an illustrative path over time.",
+      "rows": 11,
+      "columns": {
+        "t": "time, in periods",
+        "real_output_Y": "real output, index",
+        "price_level_P": "the price level, index",
+        "money_stock_M": "the money stock, held fixed"
+      }
+    }
+  ]
+}

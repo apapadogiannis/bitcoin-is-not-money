@@ -8,6 +8,16 @@ Replication package for the paper by Agisilaos Papadogiannis, forthcoming in *As
 Paper: `paper/manuscript.pdf` (author version, with LaTeX and Word sources); preprint on SSRN: [doi:10.2139/ssrn.5435197](https://doi.org/10.2139/ssrn.5435197).
 Archived on Zenodo: [doi:10.5281/zenodo.24249917](https://doi.org/10.5281/zenodo.24249917).
 
+## For AI agents and programs
+
+Read [`llms.txt`](llms.txt) first. It says what the package holds, what it adds over reading the
+paper or recomputing, how to read the figures and what not to use them for. It opens with the
+headline figures. [`outputs/results.json`](outputs/results.json) holds the same headline figures,
+each with the table cell it is read from, a description of the result tables and their columns, and
+the paper, the identifiers, the version, the licence and the citation under its `package` key. Both
+files are written by `scripts/make_guide.py` from `CITATION.cff`, `guide.toml` and the stored tables,
+and both are covered by the check.
+
 ## What this is
 
 The paper asks whether a hard-capped monetary base such as Bitcoin's can serve as money in a
@@ -27,7 +37,8 @@ and the numbers derived in the text.
 
 ```
 scripts/    one script per figure or calculation (see below)
-outputs/    the tables behind the figures and the numbers quoted in the text (CSV)
+outputs/    the tables behind the figures and the numbers quoted in the text (CSV); results.json describes them
+llms.txt    guide for AI agents and programs, generated; guide.toml holds its statements about this package
 figures/    the three figures (PNG and PDF)
 paper/      the manuscript PDF, LaTeX source and Word file
 data/       all input data (see Data and licensing)
@@ -57,7 +68,7 @@ Each takes `python3 -I <script>.py DATA_DIR OUT_DIR`.
 ## How the check works
 
 ```bash
-python3 check_outputs.py    # reruns ./run_all.sh, then compares
+python3 check_outputs.py --also llms.txt    # reruns ./run_all.sh, then compares
 ```
 
 1. The result tables in `outputs/` are stored in this repository exactly as they were when the

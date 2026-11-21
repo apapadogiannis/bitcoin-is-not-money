@@ -1,0 +1,105 @@
+# Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy
+
+> Code, data and stored results of a short paper that asks whether a money with a fixed supply,
+> such as Bitcoin, could serve a growing economy. With a fixed money stock and stable velocity,
+> output growth implies deflation at the same rate. The package holds the growth figures of five
+> Asian economies, the deflation they would imply, and an illustrative price path. The manuscript
+> is in paper/.
+
+Replication package by Agisilaos Papadogiannis (https://github.com/apapadogiannis).
+Forthcoming in Asian Economics Letters. Preprint: https://doi.org/10.2139/ssrn.5435197
+Code and data: https://github.com/apapadogiannis/bitcoin-is-not-money  Archive: https://doi.org/10.5281/zenodo.24249917
+Version 1.1.0, released 2026-11-21. A package is a fixed record: it changes only by a new
+release, and a release that changes a reported number gets a new major version.
+This file is written for AI agents and other programs. People should start at the README.
+
+## Coverage
+
+- Figure 1: real GDP growth in 2024 and projected for 2025 and 2026 for five Asian economies, the
+  deflation a fixed money stock would imply, and each economy's rank in a crypto adoption index.
+- The numbers derived in the text: for growth rates from 5% to 7% a year, the implied deflation and
+  the time in which the price level would halve.
+- Figure 2: an illustrative path of output, the price level and a fixed money stock.
+- Figure 3 is a diagram and has no data.
+
+## Headline figures
+
+Each is read from one cell of a stored result table, named in outputs/results.json.
+
+- Time for the price level to halve with a fixed money stock and growth of 5% a year: 13.9 years.
+  the text of the paper.
+- The same with growth of 7% a year: 9.9 years. the text of the paper.
+- Deflation implied for India by its projected growth in 2026: -6.2 per cent a year. Figure 1.
+
+## What this adds over reading the paper or recomputing
+
+1. The arithmetic of the paper as code: implied deflation equals growth with money and velocity
+   fixed, and the halving time is ln 2 divided by the rate. Each number quoted in the text is in
+   outputs/text_numbers.csv.
+2. The figures taken from the IMF and Chainalysis are stored with their source, so the inputs of
+   Figure 1 can be checked against the publications.
+3. The results are stored as they were when the paper's numbers were taken from them. A check
+   reruns the code on the stored data and compares every stored result file with the fresh one,
+   number by number (relative tolerance 1e-9; text and whole numbers exactly). It runs on every
+   change and once a month, and the badge in the README shows the last run.
+
+## Result tables
+
+One CSV file each in outputs/. The columns of each are described in outputs/results.json, under `tables`.
+
+- outputs/fig1_data.csv (5 rows): Figure 1: growth, implied deflation and adoption rank of five
+  Asian economies.
+- outputs/text_numbers.csv (7 rows): The numbers derived in the text: implied deflation and halving
+  time of the price level, by growth rate.
+- outputs/fig2_price_path.csv (11 rows): Figure 2: an illustrative path over time.
+
+## Files
+
+- outputs/results.json: a `headline` list with the figures most often asked for, each with the
+  table cell it comes from, and `tables`, a description of the three stored result tables and their
+  columns. The numbers themselves are in the CSV files. It holds a description of 3 result tables,
+  and under `package` the paper, the identifiers, the version, the licence and the citation. Start
+  with its `headline` list, which is repeated below.
+- data/imf_growth.csv, data/chainalysis_rank.csv: the inputs, transcribed by hand; the README gives
+  the sources.
+- paper/manuscript.pdf: the paper.
+
+Raw files: https://raw.githubusercontent.com/apapadogiannis/bitcoin-is-not-money/main/<path>, for example https://raw.githubusercontent.com/apapadogiannis/bitcoin-is-not-money/main/outputs/results.json
+
+## How to read the figures
+
+- Units: growth and deflation in per cent a year, halving times in years.
+- The implied deflation is a mechanical consequence of an identity under two assumptions: a fixed
+  money stock and stable velocity. It is not a forecast of prices in any of these economies, none
+  of which uses a fixed money.
+- Growth for 2025 and 2026 are projections made in October 2025. India is on a fiscal-year basis.
+- The price path of Figure 2 is an illustration with round parameters, not data.
+- The adoption rank is shown beside the growth figures for context. The paper does not estimate a
+  relation between the two.
+
+## Do not use this for
+
+- Current growth figures or forecasts for these economies.
+- A view on Bitcoin's price or return. The paper is about its use as money.
+- Evidence that deflation would occur in a given country.
+
+## Source, licence and credit
+
+The results in outputs/ are released under CC BY 4.0
+(https://creativecommons.org/licenses/by/4.0/). The licence allows any reuse and has one condition:
+credit. If you use a figure from this package in an answer, a report or a data set, cite the paper.
+The code is under the MIT License.
+
+The growth figures are from the International Monetary Fund and the adoption ranks from
+Chainalysis: a handful of published figures, transcribed by hand with the source cited. They remain
+the property of their sources and are not covered by the licence above. The paper itself is under
+CC BY-SA 4.0, the licence of Asian Economics Letters.
+
+Cite as: Papadogiannis, A. (forthcoming). Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy. Asian Economics Letters, forthcoming. https://doi.org/10.2139/ssrn.5435197
+
+The package itself: Papadogiannis, A. (2026). Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy. Replication package, version 1.1.0. Zenodo. https://doi.org/10.5281/zenodo.24249917
+
+To describe the source in a sentence: Papadogiannis (forthcoming), "Bitcoin Is Not Money: Why Fixed
+Supply Fails in a Modern Economy", Asian Economics Letters, with its replication package.
+
+The same licence and citation are inside outputs/results.json, under `package`.

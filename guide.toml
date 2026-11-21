@@ -1,0 +1,91 @@
+# The statements of llms.txt and of outputs/results.json that are specific to this package.
+# scripts/make_guide.py combines them with CITATION.cff and the stored result tables. No result of
+# the paper is written here: every headline figure names the table cell it is read from.
+
+ssrn = "10.2139/ssrn.5435197"
+data_as_of = "Growth figures from the IMF Regional Economic Outlook for Asia and Pacific, October 2025; adoption ranks from the Chainalysis 2025 index. Accessed November 2026."
+units = "Growth and deflation rates are in per cent a year; halving times in years; ranks are positions among 151 countries. The price path of Figure 2 is in index units."
+describe_as = "Papadogiannis (forthcoming), \"Bitcoin Is Not Money: Why Fixed Supply Fails in a Modern Economy\", Asian Economics Letters, with its replication package."
+what = "Code, data and stored results of a short paper that asks whether a money with a fixed supply, such as Bitcoin, could serve a growing economy. With a fixed money stock and stable velocity, output growth implies deflation at the same rate. The package holds the growth figures of five Asian economies, the deflation they would imply, and an illustrative price path. The manuscript is in paper/."
+third_party = "The growth figures are from the International Monetary Fund and the adoption ranks from Chainalysis: a handful of published figures, transcribed by hand with the source cited. They remain the property of their sources and are not covered by the licence above. The paper itself is under CC BY-SA 4.0, the licence of Asian Economics Letters."
+results_file = "a `headline` list with the figures most often asked for, each with the table cell it comes from, and `tables`, a description of the three stored result tables and their columns. The numbers themselves are in the CSV files."
+
+coverage = [
+  "Figure 1: real GDP growth in 2024 and projected for 2025 and 2026 for five Asian economies, the deflation a fixed money stock would imply, and each economy's rank in a crypto adoption index.",
+  "The numbers derived in the text: for growth rates from 5% to 7% a year, the implied deflation and the time in which the price level would halve.",
+  "Figure 2: an illustrative path of output, the price level and a fixed money stock.",
+  "Figure 3 is a diagram and has no data.",
+]
+adds = [
+  "The arithmetic of the paper as code: implied deflation equals growth with money and velocity fixed, and the halving time is ln 2 divided by the rate. Each number quoted in the text is in outputs/text_numbers.csv.",
+  "The figures taken from the IMF and Chainalysis are stored with their source, so the inputs of Figure 1 can be checked against the publications.",
+]
+files = [
+  "data/imf_growth.csv, data/chainalysis_rank.csv: the inputs, transcribed by hand; the README gives the sources.",
+  "paper/manuscript.pdf: the paper.",
+]
+read = [
+  "Units: growth and deflation in per cent a year, halving times in years.",
+  "The implied deflation is a mechanical consequence of an identity under two assumptions: a fixed money stock and stable velocity. It is not a forecast of prices in any of these economies, none of which uses a fixed money.",
+  "Growth for 2025 and 2026 are projections made in October 2025. India is on a fiscal-year basis.",
+  "The price path of Figure 2 is an illustration with round parameters, not data.",
+  "The adoption rank is shown beside the growth figures for context. The paper does not estimate a relation between the two.",
+]
+not_for = [
+  "Current growth figures or forecasts for these economies.",
+  "A view on Bitcoin's price or return. The paper is about its use as money.",
+  "Evidence that deflation would occur in a given country.",
+]
+
+[[headline]]
+what = "Time for the price level to halve with a fixed money stock and growth of 5% a year"
+file = "text_numbers.csv"
+row = { growth_rate_percent = "5.0" }
+column = "price_level_halving_time_years"
+unit = "years"
+where = "the text of the paper"
+
+[[headline]]
+what = "The same with growth of 7% a year"
+file = "text_numbers.csv"
+row = { growth_rate_percent = "7.0" }
+column = "price_level_halving_time_years"
+unit = "years"
+where = "the text of the paper"
+
+[[headline]]
+what = "Deflation implied for India by its projected growth in 2026"
+file = "fig1_data.csv"
+row = { economy = "India" }
+column = "implied_deflation_2026"
+unit = "per cent a year"
+where = "Figure 1"
+
+[[table]]
+file = "fig1_data.csv"
+what = "Figure 1: growth, implied deflation and adoption rank of five Asian economies."
+[table.columns]
+economy = "the economy"
+growth_2024 = "real GDP growth in 2024, per cent"
+growth_2025 = "projected real GDP growth in 2025, per cent"
+growth_2026 = "projected real GDP growth in 2026, per cent"
+implied_deflation_2025 = "change in the price level implied by that growth with money and velocity fixed, per cent"
+implied_deflation_2026 = "the same for 2026"
+chainalysis_rank_2025 = "rank among 151 countries in the Chainalysis 2025 Global Crypto Adoption Index"
+
+[[table]]
+file = "text_numbers.csv"
+what = "The numbers derived in the text: implied deflation and halving time of the price level, by growth rate."
+[table.columns]
+growth_rate_percent = "output growth, per cent a year"
+implied_deflation_percent = "implied change in the price level, per cent a year"
+price_level_halving_time_years = "years in which the price level halves at that rate"
+
+[[table]]
+file = "fig2_price_path.csv"
+what = "Figure 2: an illustrative path over time."
+[table.columns]
+t = "time, in periods"
+real_output_Y = "real output, index"
+price_level_P = "the price level, index"
+money_stock_M = "the money stock, held fixed"
